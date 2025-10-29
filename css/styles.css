@@ -606,12 +606,7 @@
     border-radius: calc(infinity * 1px);
   }
 
-  .circle-48 {
-    width: var(--circle-size-48);
-    height: var(--circle-size-48);
-    flex-shrink: 0;
-    border-radius: calc(infinity * 1px);
-  }
+  
 
   .circle-54 {
     width: var(--circle-size-54);
