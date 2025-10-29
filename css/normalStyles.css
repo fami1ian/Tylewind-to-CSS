@@ -4145,7 +4145,9 @@ img[loading="lazy"].loaded {
 .button-text-nowrap {
   white-space: nowrap;
 }
-
+.text-nowrap {
+    text-wrap: nowrap;
+  }
 
 
 @media (width >=64rem) {
