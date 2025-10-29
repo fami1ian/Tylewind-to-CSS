@@ -1461,7 +1461,7 @@
                         <div x-ref="tabMarker"
                             class="absolute left-0 z-10 py-[1px] pr-[4px] !w-1/4 !h-full duration-600 ease-in-out "
                             x-cloak>
-                            <div class="!w-full !h-full bg-white rounded-full shadow-black-5-10"></div>
+                            <div class="toggle-box-mb"></div>
                         </div>
                     </div>
                     <div class="space-y-[9px]">
@@ -2263,225 +2263,124 @@
                                                 return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
                                             }
                                         }" x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);">
-                                <div class="space-y-2">
+                                <div class="">
                                     <div x-ref="tabButtons"
-                                        class="font-inter font-bold  text-xs text-main-black-60 relative inline-grid items-center justify-center !w-full h-[39px] sm:h-[35px] grid-cols-3 gap-[6px] px-[1px] bg-main-black-5 rounded-full  border border-border-line-white">
+                                        class="div-toggle-mb">
                                         <button :id="$id(tabId)" @click="tabButtonClicked($el);" type="button"
-                                            class="relative z-20 inline-flex items-center justify-center !w-full h-full transition-all rounded-full whitespace-nowrap duration-250 ease-in-out"
+                                            class="toggle-button-mb"
                                             :class="tabSelected==1
                                                 ? 'text-main-black-100 cursor-default'
                                                 : 'hover:bg-black/4 cursor-pointer'">Квартиры</button>
                                         <button :id="$id(tabId)" @click="tabButtonClicked($el);" type="button"
-                                            class="relative z-20 inline-flex items-center justify-center !w-full h-full transition-all rounded-full whitespace-nowrap duration-250 ease-in-out"
+                                            class="toggle-button-mb"
                                             :class="tabSelected==2
                                                 ? 'text-main-black-100 cursor-default'
                                                 : 'hover:bg-black/4 cursor-pointer'">Паркинги</button>
                                         <button :id="$id(tabId)" @click="tabButtonClicked($el);" type="button"
-                                            class="relative z-20 inline-flex items-center justify-center !w-full h-full transition-all rounded-full whitespace-nowrap duration-250 ease-in-out"
+                                            class="toggle-button-mb"
                                             :class="tabSelected==3
                                                 ? 'text-main-black-100 cursor-default'
                                                 : 'hover:bg-black/4 cursor-pointer'">Кладовые</button>
                                         <div x-ref="tabMarker"
-                                            class="absolute left-0 z-10 py-[1px] pr-[4px] !w-1/3 !h-full duration-600 ease-in-out "
+                                            class="toggle-big-box-mb"
                                             x-cloak>
-                                            <div class="!w-full !h-full bg-white rounded-full shadow-black-5-10"></div>
+                                            <div class="toggle-box-mb"></div>
                                         </div>
                                     </div>
                                     <div :id="$id(tabId + '-content')" x-show="tabContentActive($el)" class=" ">
                                         <div
-                                            class="max-h-[330px] overflow-y-auto flex flex-col gap-3 p-[6px] pr-2 rounded-[16px] bg-main-bg [&::-webkit-scrollbar]:appearance-none">
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            class="big-div-mb">
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
-                                                        <p>Байтерек • 12 мин</p>
-                                                        <p>В ипотеку 124 400 ₸/мес</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div :id="$id(tabId + '-content')" x-show="tabContentActive($el)" class=" ">
-                                        <div
-                                            class="max-sm:max-h-[330px] max-sm:overflow-y-auto max-sm:flex max-sm:flex-col gap-3 sm:gap-4 max-sm:pr-2 p-[6px] sm:p-2 rounded-[16px] bg-main-bg max-sm:[&::-webkit-scrollbar]:appearance-none">
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
-                                                    src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
-                                                        <p>от 13,4 млн ₸</p>
-                                                    </div>
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
-                                                        <p>Байтерек • 12 мин</p>
-                                                        <p>В ипотеку 124 400 ₸/мес</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
-                                                    src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
-                                                        <p>от 13,4 млн ₸</p>
-                                                    </div>
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
-                                                        <p>Байтерек • 12 мин</p>
-                                                        <p>В ипотеку 124 400 ₸/мес</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
-                                                    src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
-                                                        <p>от 13,4 млн ₸</p>
-                                                    </div>
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
-                                                        <p>Байтерек • 12 мин</p>
-                                                        <p>В ипотеку 124 400 ₸/мес</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
-                                                    src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
-                                                        <p>от 13,4 млн ₸</p>
-                                                    </div>
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
-                                                        <p>Байтерек • 12 мин</p>
-                                                        <p>В ипотеку 124 400 ₸/мес</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
-                                                    src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
-                                                        <p>от 13,4 млн ₸</p>
-                                                    </div>
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
-                                                        <p>Байтерек • 12 мин</p>
-                                                        <p>В ипотеку 124 400 ₸/мес</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
-                                                    src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
-                                                        <p>от 13,4 млн ₸</p>
-                                                    </div>
-                                                    <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
@@ -2491,98 +2390,199 @@
                                     </div>
                                     <div :id="$id(tabId + '-content')" x-show="tabContentActive($el)" class=" ">
                                         <div
-                                            class="max-h-[330px] overflow-y-auto flex flex-col gap-3 p-[6px] pr-2 rounded-[16px] bg-main-bg [&::-webkit-scrollbar]:appearance-none">
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            class="big-div-mb">
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class=" flex gap-2 items-center w-full">
-                                                <img class="size-[54px] object-cover object-center rounded-[10px]"
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
                                                     src="./assets/images/RC/rc-1.png" alt="">
-                                                <div class="w-full">
+                                                <div class="gap-full-mb">
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-sm">
-                                                        <h5 class="font-bounded text-sm">Respublika</h5>
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
                                                         <p>от 13,4 млн ₸</p>
                                                     </div>
                                                     <div
-                                                        class="flex justify-between text-center gap-2 font-medium text-2xs text-main-black-60">
+                                                        class="gap-mb">
+                                                        <p>Байтерек • 12 мин</p>
+                                                        <p>В ипотеку 124 400 ₸/мес</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div :id="$id(tabId + '-content')" x-show="tabContentActive($el)" class=" ">
+                                        <div
+                                            class="big-div-mb">
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
+                                                    src="./assets/images/RC/rc-1.png" alt="">
+                                                <div class="gap-full-mb">
+                                                    <div
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
+                                                        <p>от 13,4 млн ₸</p>
+                                                    </div>
+                                                    <div
+                                                        class="gap-mb">
+                                                        <p>Байтерек • 12 мин</p>
+                                                        <p>В ипотеку 124 400 ₸/мес</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
+                                                    src="./assets/images/RC/rc-1.png" alt="">
+                                                <div class="gap-full-mb">
+                                                    <div
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
+                                                        <p>от 13,4 млн ₸</p>
+                                                    </div>
+                                                    <div
+                                                        class="gap-mb">
+                                                        <p>Байтерек • 12 мин</p>
+                                                        <p>В ипотеку 124 400 ₸/мес</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
+                                                    src="./assets/images/RC/rc-1.png" alt="">
+                                                <div class="gap-full-mb">
+                                                    <div
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
+                                                        <p>от 13,4 млн ₸</p>
+                                                    </div>
+                                                    <div
+                                                        class="gap-mb">
+                                                        <p>Байтерек • 12 мин</p>
+                                                        <p>В ипотеку 124 400 ₸/мес</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
+                                                    src="./assets/images/RC/rc-1.png" alt="">
+                                                <div class="gap-full-mb">
+                                                    <div
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
+                                                        <p>от 13,4 млн ₸</p>
+                                                    </div>
+                                                    <div
+                                                        class="gap-mb">
+                                                        <p>Байтерек • 12 мин</p>
+                                                        <p>В ипотеку 124 400 ₸/мес</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
+                                                    src="./assets/images/RC/rc-1.png" alt="">
+                                                <div class="gap-full-mb">
+                                                    <div
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
+                                                        <p>от 13,4 млн ₸</p>
+                                                    </div>
+                                                    <div
+                                                        class="gap-mb">
+                                                        <p>Байтерек • 12 мин</p>
+                                                        <p>В ипотеку 124 400 ₸/мес</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="div-list-mb">
+                                                <img class="image-size-mb"
+                                                    src="./assets/images/RC/rc-1.png" alt="">
+                                                <div class="gap-full-mb">
+                                                    <div
+                                                        class="gap-2-mb">
+                                                        <h5 class="big-text-mb">Respublika</h5>
+                                                        <p>от 13,4 млн ₸</p>
+                                                    </div>
+                                                    <div
+                                                        class="gap-mb">
                                                         <p>Байтерек • 12 мин</p>
                                                         <p>В ипотеку 124 400 ₸/мес</p>
                                                     </div>
@@ -2594,34 +2594,34 @@
                             </div>
                         </div>
                     </div>
-                    <div class="bg-main-bg rounded-[16px] p-2 space-y-3">
-                        <div class="flex items-center justify-between gap-1">
-                            <div class="flex items-center gap-[14px]">
-                                <div class="size-[40px] bg-white rounded-[8px] place-items-center place-content-center">
+                    <div class="big-div-mb">
+                        <div class="small-div-mb">
+                            <div class="icon-text-div-mb">
+                                <div class="icon-small-mb">
                                     <img class="icon-16" src="./assets/icons/inbox-dark.svg" />
                                 </div>
-                                <div class="text-2xs">
-                                    <h5 class="font-bounded text-sm">Кладовые</h5>
-                                    <p class="text-main-black-60 font-medium">от 1 млн ₸</p>
+                                <div class="small-text-div-mb">
+                                    <h5 class="big-text-mb">Кладовые</h5>
+                                    <p class="small-text-mb">от 1 млн ₸</p>
                                 </div>
                             </div>
                             <button
-                                class="size-[32px] rounded-[8px] backdrop-blur-[50px] border border-border-line-white place-items-center place-content-center">
+                                class="mobile-btn">
                                 <img class="icon-16" src="./assets/icons/arrow-right-dark.svg" />
                             </button>
                         </div>
-                        <div class="flex items-center justify-between gap-1">
-                            <div class="flex items-center gap-[14px]">
-                                <div class="size-[40px] bg-white rounded-[8px] place-items-center place-content-center">
+                        <div class="small-div-mb">
+                            <div class="icon-text-div-mb">
+                                <div class="icon-small-mb">
                                     <img class="icon-16" src="./assets/icons/info-dark.svg" />
                                 </div>
-                                <div class="text-2xs">
-                                    <h5 class="font-bounded text-sm">О компании</h5>
-                                    <p class="text-main-black-60 font-medium">Sat-NS</p>
+                                <div class="small-text-div-mb">
+                                    <h5 class="big-text-mb">О компании</h5>
+                                    <p class="small-text-mb">Sat-NS</p>
                                 </div>
                             </div>
                             <button
-                                class="size-[32px] rounded-[8px] backdrop-blur-[50px] border border-border-line-white place-items-center place-content-center">
+                                class="mobile-btn">
                                 <img class="icon-16" src="./assets/icons/arrow-right-dark.svg" />
                             </button>
                         </div>
@@ -2658,18 +2658,18 @@
         </nav>
         <div class="chat-list-container">
             <div id="containerForAvailableChats"
-                class="relative  -z-1 overflow-hidden max-h-0 pb-0 translate-y-12 opacity-0 flex flex-col gap-3 transition-all duration-650 ease-in-out transform">
-                <button class="circle-54" data-circle-color="green">
+                class="container-for-chats">
+                <button class="chats-circles" data-circle-color="green">
                     <img class="icon-base" src="./assets/icons/viber.svg" alt="">
                 </button>
-                <button class="circle-54" data-circle-color="green">
+                <button class="chats-circles" data-circle-color="green">
                     <img class="icon-base" src="./assets/icons/telegram.svg" alt="">
                 </button>
-                <button class="circle-54" data-circle-color="green">
+                <button class="chats-circles" data-circle-color="green">
                     <img class="icon-base" src="./assets/icons/call-white.svg" alt="">
                 </button>
             </div>
-            <button id="btnAvailableChats" class="relative z-2 circle-54" data-circle-color="green">
+            <button id="btnAvailableChats" class="chats-circle" data-circle-color="green">
                 <img src="./assets/icons/chat-white.svg" alt="">
             </button>
         </div>
@@ -2679,14 +2679,14 @@
         </div>
     </section>
     <!-- Reels Modal -->
-    <section id="reelsModal" class="modal hidden fixed inset-0 z-200 bg-black flex justify-center items-center">
+    <section id="reelsModal" class="reels-modal hidden">
         <button
-            class="absolute top-4 right-4 z-10 size-[48px] rounded-full bg-white/10 backdrop-blur-[50px] place-content-center place-items-center data-close-modal hover:bg-white/20 transition-colors duration-300 ease-in-out">
+            class="data-close-modal reels-close">
             <img class="icon-base" src="./assets/icons/cancel-white.svg" alt="">
         </button>
-        <div class="reels-modal-container relative w-full h-full max-w-[500px] flex items-center justify-center">
+        <div class="reels-container">
             <!-- Video Container -->
-            <div class="relative w-full h-full max-h-[90vh] bg-black rounded-[24px] overflow-hidden">
+            <div class="reels-video-container">
                 <video id="reelsVideo" class="w-full h-full object-cover" playsinline loop>
                     <source src="" type="video/mp4">Your browser does not support the video tag.
 
@@ -2694,31 +2694,31 @@
                 </video>
                 <!-- Play/Pause Overlay -->
                 <div id="reelsPlayPause"
-                    class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-300">
-                    <div class="circle-82 pointer-events-auto" data-circle-color="full-blur">
+                    class="reels-play-pause">
+                    <div class="reels-pause" data-circle-color="full-blur">
                         <img id="reelsPlayIcon" class="icon-33" src="./assets/icons/puase-white.svg" alt="">
                     </div>
                 </div>
                 <!-- Navigation Arrows -->
                 <button id="reelsPrevBtn"
-                    class="reel-button absolute left-4 top-1/2 -translate-y-1/2 circle-48 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                    class="reels-next-l-btn circle-48"
                     data-circle-color="full-blur">
-                    <svg style="transform: rotate(90deg);" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                    <svg style="transform: rotate(90deg);" class="reels-next" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
                 <button id="reelsNextBtn"
-                    class="reel-button absolute right-4 top-1/2 -translate-y-1/2 circle-48 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                    class="reels-next-r-btn circle-48"
                     data-circle-color="full-blur">
-                    <svg style="transform: rotate(-90deg);" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                    <svg style="transform: rotate(-90deg);" class="reels-next" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
                 <!-- Progress Bar -->
-                <div class="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
-                    <div style="height: 4px;" id="reelsProgress" class="h-full bg-white transition-all duration-100"
+                <div class="reels-progress-bottom">
+                    <div style="height: 4px;" id="reelsProgress" class="reels-progress"
                         style="width: 0%"></div>
                 </div>
             </div>
@@ -2766,7 +2766,7 @@
                         <div class="quiz-space">
                             <h2 class="quiz-title">На какой бюджет рассчитываете?
                             </h2>
-                            <p class="text-sm text-main-black-60 font-medium">Шаг 2 из 3</p>
+                            <p class="step-3-text">Шаг 2 из 3</p>
                         </div>
                         <div class="quiz-options">
                             <button class="quiz-option-btn" data-value="not-important">Не важно</button>
