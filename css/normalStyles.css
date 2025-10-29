@@ -2,6 +2,7 @@
 @layer properties;
 
 @import './prep.css';
+@import './optM.css';
 
 .acc {
   width: 80%;

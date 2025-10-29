@@ -427,7 +427,7 @@
                 </div>
                 <div>
                     <!-- Respublika Content -->
-                    <div id="parkcity-content" class="respublika-content">
+                    <div id="respublika-content" class="respublika-content">
                         <div class="resp-con-top">
                             <div
                                 class="com-title-con">
@@ -501,7 +501,7 @@
                         </div>
                     </div>
                     <!-- Park City Content -->
-                    <div id="respublika-content" class="respublika-content">
+                    <div id="parkcity-content" class="respublika-content">
                         <div class="resp-con-top">
                             <div
                                 class="com-title-con">
@@ -579,96 +579,76 @@
             </div>
         </section>
         <section class="main-container">
-            <div
-                class="space-y-6 lg:space-y-[60px] lg:bg-white lg:rounded-[24px] lg:px-[64px] lg:py-[94px] lg:overflow-x-hidden">
-                <h2 class="pay-m-title">Способы покупки</h2>
-                <div
-                    class="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-[301px_1fr] lg:grid-rows-[1fr_1fr] gap-2 lg:gap-[50px]">
-                    <div
-                        class="order-1 relative  z-1 bg-primary rounded-[24px] p-4 lg:pt-[46px] lg:px-[48px] lg:pb-6 flex flex-col justify-between max-sm:h-[301px] overflow-hidden">
-                        <div class="space-y-[2px] lg:space-y-2">
-                            <h3 class="text-xl font-bounded text-white lg:text-28">Ипотеки: все виды</h3>
-                            <p class="text-2xs text-main-white-60 lg:text-base lg:w-[40%]">Собрали для вас все
-                                необходимые документы и расчёты </p>
-                        </div>
-                        <button class="size-[38px] rounded-[8px] border border-white place-items-center">
-                            <img class="icon-base" src="./assets/icons/arrow-right-white.svg" alt="">
-                        </button>
-                        <div class="rounded-full py-[18px] px-6 text-xs text-white bg-black/1 backdrop-blur-[50px]
-                                    absolute -z-1  calculate lg:text-18">
-                            <span>Рассчитай 👀 и оцени 💫</span>
-                        </div>
+            <div id="EditInThisDiv"class="payment-methods-section">
+                <h2 class="payment-title">Способы покупки</h2>
+                <div class="payment-grid">
+                    <div class="payment-card mortgage-card">
+                <div class="mortgage-card-content">
+                    <h3 class="mortgage-card-title">Ипотеки: все виды</h3>
+                    <p class="mortgage-card-description">Собрали для вас все необходимые документы и расчёты</p>
+                </div>
+                <button class="card-button">
+                    <img class="card-button-icon" src="./assets/icons/arrow-right-white.svg" alt="">
+                </button>
+                <div class="calculate-badge">
+                    <span>Рассчитай 👀 и оцени 💫</span>
+                </div>
+                <div class="gradient-bg"></div>
+                <div class="calculator-image-wrapper">
+                    <img class="calculator-image" src="./assets/images/calculator.png" alt="">
+                </div>
+            </div>
+                     <div class="payment-card installment-card">
+                <div>
+                    <div class="installment-card-title">Рассрочка</div>
+                    <div class="installment-card-description">На определенные жилые комплексы</div>
+                </div>
+                <button class="installment-button" data-rectangle-color="white-blur-50">
+                    <img class="installment-button-icon" src="./assets/icons/arrow-right-dark.svg" alt="">
+                </button>
+                <div class="percent-image-wrapper">
+                    <img class="percent-image" src="./assets/images/percent-0.png" alt="">
+                </div>
+            </div>
+                    <div class="booking-card">
+                        <div class="booking-card-header">
+                    <h2 class="booking-card-title">Забронировать онлайн</h2>
+                    <p class="booking-card-description">Если вам нужно пару дней, чтобы принять решение, забронируйте планировку, чтобы мы случайно её не продали другим</p>
+                </div>
                         <div
-                            class="absolute -z-3 bottom-8 left-0 right-15 h-[166px] bg-linear-269 to-[#042C1B00] from-[#185139]">
-                        </div>
-                        <div class="-z-2 absolute -right-15 -bottom-12 lg:-bottom-18">
-                            <img class="w-[267px] h-[225px] lg:w-[397px] lg:h-[335px] object-contain scale-170 lg:scale-150"
-                                src="./assets/images/calculator.png" alt="">
-                        </div>
-                    </div>
-                    <div
-                        class="order-2 sm:order-3 relative z-1 flex flex-col justify-between max-sm:h-[166px] bg-[#FCFCFD] lg:bg-[#F1F1F1] rounded-[24px] p-4 lg:pl-[46px] lg:pt-[46px] lg:pb-6 overflow-hidden">
-                        <div class="">
-                            <div class="text-xl font-bounded lg:text-28">Рассрочка
-                            </div>
-                            <div class="text-main-black-60 text-2xs lg:text-base">На определенные жилые комплексы
-                            </div>
-                        </div>
-                        <button
-                            class="size-[38px] rounded-[8px] border border-border-line-white backdrop-blur-[50px] place-items-center"
-                            data-rectangle-color="white-blur-50">
-                            <img class="icon-16" src="./assets/icons/arrow-right-dark.svg" alt="">
-                        </button>
-                        <div
-                            class="absolute -z-1 -right-10 -bottom-1 max-w-[188px] max-h-[155px] lg:max-w-[407px] lg:max-h-[335px]">
-                            <img class="size-full scale-125 lg:scale-100" src="./assets/images/percent-0.png" alt="">
-                        </div>
-                    </div>
-                    <div
-                        class="order-3 sm:order-2 sm:row-span-2 relative z-1 space-y-4 p-4 lg:space-y-[22px] lg:p-[46px] bg-[#FCFCFD] lg:bg-[#F1F1F1] rounded-[24px] space-y-2 sm:space-y-4 overflow-hidden">
-                        <div class="max-sm:space-y-[2px] lg:space-y-2">
-                            <h2 class="text-xl font-bounded lg:text-28">Забронировать онлайн</h2>
-                            <p class="sm:hidden text-2xs text-main-black-60 lg:text-base lg:block lg:w-[80%]">Если вам
-                                нужно пару дней, чтобы принять решение, забронируйте планировку, чтобы мы случайно её не
-                                продали другим
-                            </p>
-                        </div>
-                        <div
-                            class="relative z-1 bg-white border border-border-line-white rounded-[24px] h-[400px] lg:h-[454px] overflow-hidden place-items-center max-lg:pt-25 lg:place-content-end">
+                            class="apartment-preview-container">
                             <div
-                                class="relative z-1 w-[198px] lg:w-auto lg:max-w-[304px] lg:w-full bg-white border-[0.52px] lg:border-[0.8px] lg:border-b-0 border-border-line-white shadow-deeper lg:shadow-deeper-2 px-[14px] lg:px-[22px] py-[10px] lg:pt-[17px] lg:pb-6 max-lg:rounded-[12px] lg:rounded-t-[12px] space-y-[14px] lg:space-y-5">
-                                <div class="absolute -top-5 -right-[12%] badge-sm !px-5" data-badge-color="for-sale">
+                                class="apartment-card">
+                                <div class="top-rate-badge badge-md" data-badge-color="for-sale">
                                     <img class="icon-base" src="./assets/icons/star-white.svg" alt="">
                                     <span>Top rate</span>
                                 </div>
-                                <div class="space-y-[11px] lg:space-y-5">
-                                    <h4 class="text-xs font-bounded lg:text-base">Respublika</h4>
+                                <div class="apartment-details-section">
+                                    <h4 class="apartment-name">Respublika</h4>
                                     <div
-                                        class="w-[107px] h-[114px] lg:h-[175px] lg:w-auto lg:aspect-auto overflow-hidden place-self-center">
-                                        <img class="full-size-img scale-145" src="./assets/images/apartment-plan.png"
+                                        class="apartment-image-container">
+                                        <img class="apartment-image" src="./assets/images/apartment-plan.png"
                                             alt="">
                                     </div>
                                 </div>
-                                <p class="flex justify-between text-2xs lg:text-sm">
+                                <p class="apartment-info">
                                     <span>1 комнатная, 57,58 </span>
-                                    <span class="text-try-it-out">от 15.5 млн ₸ </span>
+                                    <span class="apartment-price">от 15.5 млн ₸ </span>
                                 </p>
                             </div>
                             <p
-                                class="absolute top-[5%] lg:top-[10%] inset-x-1.5 text-center text-main-black-60 opacity-30 font-bounded text-2xl lg:text-46 lg:leading-11">
+                                class="background-text">
                                 Самая популярная <br>
                                 планировка <br>SAT NS Respublica
 
 
 
                             </p>
-                            <p class="absolute z-0 bottom-13 left-5 lg:bottom-25 lg:left-10 text-xs lg:text-sm text-wrap flex gap-[9px]
-                                      before:content-[''] before:size-[9px] before:bg-main-black-100 before:mt-1">
-                                <span class="max-w-[107px]">Успейте забронировать</span>
+                            <p class="info-bullet-left">
+                                <span style="max-width: 107px;">Успейте забронировать</span>
                             </p>
-                            <p class="absolute z-0 bottom-3 right-5 lg:right-10 lg:bottom-15 text-xs lg:text-sm text-wrap flex gap-[9px] text-right
-                                      after:content-[''] after:size-[9px] after:bg-main-black-100 after:mt-1">
-                                <span class="max-w-[107px]">В избранном 14 человек</span>
+                            <p class="info-bullet-right">
+                                <span style="max-width: 107px;">В избранном 14 человек</span>
                             </p>
                         </div>
                         <button class="btn-default" data-btn-color="green">
@@ -676,267 +656,203 @@
                         </button>
                     </div>
                 </div>
-                <div class="max-lg:hidden">
-                    <div
-                        class="group relative max-h-[700px] h-screen flex-1 flex flex-col items-center justify-center w-full text-[60px] font-bounded">
-                        <div class="about-bold flex gap-2 items-center">
-                            <div>Sat-NS —
-                            </div>
-                            <div class="bg-[#0D5034] text-[#FCFCFD] text-[34px] text-nowrap text-center py-2 rounded-[22px] shadow-green-5-33 -rotate-6 w-0 scale-0 tra
-                                group-hover:w-[310px] group-hover:scale-100 transition-all duration-600 ease-out">c
-                                2008 года</div>
-                            <div>cтроим
-                            </div>
-                        </div>
-                        <div class="about-bold">гармоничную среду, </div>
-                        <div class="about-bold">где каждый почувствует уют</div>
-                        <button
-                            class="relative z-10 border border-[#E0E6E5] rounded-[12px] text-[16px] mt-10 py-4 px-6 hover:bg-gray-100 transition-colors duration-300 ease-in-out">Подробнее
-                            о компании</button>
-                        <div class="absolute z-5 top-0 right-30 left-0 flex justify-between items-start">
-                            <div class="rounded-[12px] overflow-hidden">
-                                <img class="w-[192px] h-[214px] object-center object-cover"
-                                    src="./assets/images/AboutCompany/image-1.png" alt="">
-                            </div>
-                            <div class=" rounded-[12px] overflow-hidden">
-                                <img class="w-[192px] h-[128px]object-center object-cover"
-                                    src="./assets/images/AboutCompany/image-2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="absolute z-5 bottom-16 right-[-6%] left-15 flex justify-between items-end">
-                            <div class=" rounded-[12px] overflow-hidden">
-                                <img class="w-[427px] h-[146px] object-center object-cover"
-                                    src="./assets/images/AboutCompany/image-3.jpg" alt="">
-                            </div>
-                            <div class="rounded-[12px] overflow-hidden">
-                                <img class="h-[302px] w-[225px] object-cover object-center "
-                                    src="./assets/images/AboutCompany/image-4.png" alt="">
-                            </div>
-                        </div>
+                <div class="about-company-desktop">
+            <div class="about-hero-container group">
+                <div class="about-hero-text">
+                    <div>Sat-NS —</div>
+                    <div class="about-since-badge">c 2008 года</div>
+                    <div>cтроим</div>
+                </div>
+                <div class="about-hero-text">гармоничную среду,</div>
+                <div class="about-hero-text">где каждый почувствует уют</div>
+                <button class="about-more-button">Подробнее о компании</button>
+                
+                <div class="about-images-top">
+                    <div class="about-image-1">
+                        <img src="./assets/images/AboutCompany/image-1.png" alt="">
                     </div>
-                    <div class="acc-con mt-20 mb-30">
-                        <div class="basis-1/2 text-[18px] font-normal font-(family-name:--font-inter)">Мы
-                            специализируемся на строительстве жилых комплексов комфорт и бизнес-класса, объединяя в
-                            своих проектах современную архитектуру, удобные планировки и развитую инфраструктуру. Все
-                            объекты продуманы до мелочей — от безопасных дворов без машин до благоустроенных зон отдыха
-                            для детей и взрослых.
-                        </div>
-                        <div class="acch flex items-start justify-center w-full text-[50px]">
-                            <div class="flex flex-col items-center justify-start">
-                                <span class="font-bounded">17 лет</span>
-                                <span class="text-18">Строим дома</span>
-                            </div>
-                            <div class="flex flex-col items-center justify-start">
-                                <span class="font-bounded">2 млрд.</span>
-                                <span class="text-18">Квадратных метров</span>
-                            </div>
-                            <div class="flex flex-col items-center justify-start">
-                                <span class="font-bounded">ƟMIP</span>
-                                <span class="text-18">Стандарты озеленения</span>
-                            </div>
-                        </div>
+                    <div class="about-image-2">
+                        <img src="./assets/images/AboutCompany/image-2.jpg" alt="">
                     </div>
                 </div>
-                <div class="lg:hidden space-y-[90px] mt-[46px] lg:mt-0">
-                    <div class="flex flex-nowrap overflow-x-auto gap-[23px] hide-scrollbar -mx-4 px-4 sm:-mx-6 sm:px-6">
-                        <div class="shrink-0 bg-white rounded-[24px] p-2 pb-[23px] w-[251px] sm:w-[340px] space-y-2">
-                            <div class="h-[194px] rounded-[17px] overflow-hidden bg-[#D9D9D9]">
-                                <img class="full-size-img" src="./assets/images/AboutCompany/image-1.png" alt="">
-                            </div>
-                            <div class="px-[10px]">
-                                <h1 class="text-4xl font-bounded font-medium sm:text-34">2 млрд.</h1>
-                                <p class="font-medium text-xs">Квадратных метров</p>
+                
+                <div class="about-images-bottom">
+                    <div class="about-image-3">
+                        <img src="./assets/images/AboutCompany/image-3.jpg" alt="">
+                    </div>
+                    <div class="about-image-4">
+                        <img src="./assets/images/AboutCompany/image-4.png" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-content-container acc-con">
+                <div class="about-description">
+                    Мы специализируемся на строительстве жилых комплексов комфорт и бизнес-класса, объединяя в своих проектах современную архитектуру, удобные планировки и развитую инфраструктуру. Все объекты продуманы до мелочей — от безопасных дворов без машин до благоустроенных зон отдыха для детей и взрослых.
+                </div>
+                <div class="about-stats-container acch">
+                    <div class="about-stat-item">
+                        <span class="about-stat-number">17 лет</span>
+                        <span class="about-stat-label">Строим дома</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <span class="about-stat-number">2 млрд.</span>
+                        <span class="about-stat-label">Квадратных метров</span>
+                    </div>
+                    <div class="about-stat-item">
+                        <span class="about-stat-number">ƟMIP</span>
+                        <span class="about-stat-label">Стандарты озеленения</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="about-company-mobile">
+            <div class="about-cards-scroll hide-scrollbar">
+                <div class="about-card-mobile">
+                    <div class="about-card-image">
+                        <img class="full-size-img" src="./assets/images/AboutCompany/image-1.png" alt="">
+                    </div>
+                    <div class="about-card-content">
+                        <h1 class="about-card-number">2 млрд.</h1>
+                        <p class="about-card-label">Квадратных метров</p>
+                    </div>
+                </div>
+                <div class="about-card-mobile">
+                    <div class="about-card-image">
+                        <img class="full-size-img" src="./assets/images/AboutCompany/image-2.jpg" alt="">
+                    </div>
+                    <div class="about-card-content">
+                        <h1 class="about-card-number">17 лет</h1>
+                        <p class="about-card-label">Строим дома</p>
+                    </div>
+                </div>
+                <div class="about-card-mobile">
+                    <div class="about-card-image">
+                        <img class="full-size-img" src="./assets/images/AboutCompany/image-4.png" alt="">
+                    </div>
+                    <div class="about-card-content">
+                        <h1 class="about-card-number">ОMIP</h1>
+                        <p class="about-card-label">Стандарты озеленения</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-mobile-info">
+                <div class="about-since-badge-mobile since2008">
+                    <span>c 2008 года</span>
+                </div>
+                <div class="about-mobile-text-section">
+                    <h1 class="about-mobile-title">
+                        Sat-NS — cтроим <br>
+                        гармоничную среду, <br>
+                        где каждый почувствует уют
+                    </h1>
+                    <p class="about-mobile-description">
+                        Мы специализируемся на строительстве жилых комплексов комфорт и бизнес-класса, объединяя в своих проектах современную архитектуру, удобные планировки и развитую инфраструктуру. Все объекты продуманы до мелочей — от безопасных дворов без машин до благоустроенных зон отдыха для детей и взрослых.
+                    </p>
+                </div>
+                <button class="btn-default about-mobile-button" data-btn-color="white">
+                    <span>Подробнее о компании</span>
+                </button>
+            </div>
+        </div>
+                <div class="news-section">
+            <div class="news-title">Новости SAT</div>
+            <div class="news-content">
+                <div class="news-grid news-c">
+                    <!-- News Card 1 -->
+                    <div class="news-card group">
+                        <div class="news-card-image-wrapper">
+                            <img class="news-card-image" src="./assets/images/News/news-1.png" alt="">
+                            <div class="badge-default news-badge" data-badge-color="full-blur">
+                                <span>Полезное</span>
                             </div>
                         </div>
-                        <div class="shrink-0 bg-white rounded-[24px] p-2 pb-[23px] w-[251px] sm:w-[340px] space-y-2">
-                            <div class="h-[194px] rounded-[17px] overflow-hidden bg-[#D9D9D9]">
-                                <img class="full-size-img" src="./assets/images/AboutCompany/image-2.jpg" alt="">
-                            </div>
-                            <div class="px-[10px]">
-                                <h1 class="text-4xl font-bounded font-medium">17 лет</h1>
-                                <p class="font-medium text-xs">Строим дома</p>
-                            </div>
+                        <p class="news-card-title-wrapper">
+                            <span class="news-card-title-short">
+                                70% Астанчан хотели бы так жить
+                            </span>
+                            <span class="news-card-title-full">
+                                Совместно с ВМС Group мы провели крупное исследованиена тему планировочных решенией, читайте подробнее
+                            </span>
+                        </p>
+                        <div class="news-card-description">
+                            <p></p>
                         </div>
-                        <div class="shrink-0 bg-white rounded-[24px] p-2 pb-[23px] w-[251px] sm:w-[340px] space-y-2">
-                            <div class="h-[194px] rounded-[17px] overflow-hidden bg-[#D9D9D9]">
-                                <img class="full-size-img" src="./assets/images/AboutCompany/image-4.png" alt="">
-                            </div>
-                            <div class="px-[10px]">
-                                <h1 class="text-4xl font-bounded font-medium">ОMIP</h1>
-                                <p class="font-medium text-xs">Стандарты озеленения</p>
-                            </div>
+                        <div class="news-card-arrow">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.530741 13.2463C0.923256 13.6471 1.57745 13.6471 1.96996 13.2463L7.48153 7.72529C7.88222 7.3245 7.88222 6.67834 7.48153 6.27756L1.96179 0.756554C1.56109 0.35577 0.915078 0.35577 0.514386 0.756554C0.113694 1.15734 0.113694 1.8035 0.514386 2.20428L5.30634 7.00551L0.530741 11.8067C0.130049 12.1993 0.130049 12.8537 0.530741 13.2463Z" fill="#35463F"/>
+                            </svg>
                         </div>
                     </div>
-                    <div class="relative z-1 space-y-8">
-                        <div
-                            class="since2008 absolute -top-12 sm:-top-10 left-13 -z-1 bg-main-green-dark-2 rounded-full -rotate-8 py-2.5 px-[24px] shadow-green-5-31">
-                            <span class="text-xl text-white font-bounded">c 2008 года</span>
-                        </div>
-                        <div class="space-y-4">
-                            <h1 class="text-19 sm:text-34 font-bounded text-center leading-6 sm:leading-9">
-                                Sat-NS — cтроим <br>
-                                гармоничную среду, <br>где каждый почувствует уют
 
+                    <!-- News Card 2 -->
+                    <div class="news-card group">
+                        <div class="news-card-image-wrapper">
+                            <img class="news-card-image" src="./assets/images/News/news-2.png" alt="">
+                            <div class="badge-default news-badge" data-badge-color="full-blur">
+                                <span>Новости</span>
+                            </div>
+                        </div>
+                        <p class="news-card-title-wrapper">
+                            <span class="news-card-title-short">
+                                Мы строим так, как бы строили для себя.
+                            </span>
+                            <span class="news-card-title-full">
+                                Взяли интервью У СЕО, которая сама живет в SAT. Уют, свет и тепло - теперь это не просто слова, а стандарт каждого проекта. Уют, свет и тепло- теперь это не просто слова, а стандарт каждого проекта. Познакомьтесь с
+                            </span>
+                        </p>
+                        <div class="news-card-description">
+                            <p></p>
+                        </div>
+                        <div class="news-card-arrow">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.530741 13.2463C0.923256 13.6471 1.57745 13.6471 1.96996 13.2463L7.48153 7.72529C7.88222 7.3245 7.88222 6.67834 7.48153 6.27756L1.96179 0.756554C1.56109 0.35577 0.915078 0.35577 0.514386 0.756554C0.113694 1.15734 0.113694 1.8035 0.514386 2.20428L5.30634 7.00551L0.530741 11.8067C0.130049 12.1993 0.130049 12.8537 0.530741 13.2463Z" fill="#35463F"/>
+                            </svg>
+                        </div>
+                    </div>
 
-                            </h1>
-                            <p class="text-2xs sm:text-xs sm:font-medium">Мы специализируемся на строительстве жилых
-                                комплексов комфорт и бизнес-класса, объединяя в своих проектах современную архитектуру,
-                                удобные планировки и развитую инфраструктуру. Все объекты продуманы до мелочей —
-                                от безопасных дворов без машин до благоустроенных зон отдыха для детей и взрослых.
-                            </p>
-                        </div>
-                        <button class="btn-default" data-btn-color="white">
-                            <span>Подробнее о компании</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="space-y-[15px] lg:space-y-8 sm:mt-6 lg:mt-0">
-                    <div class="text-2xl lg:text-[42px] text-[#35463F] tracking-[-1%] font-bounded">Новости SAT
-                    </div>
-                    <div class="space-y-4">
-                        <div
-                            class="news-c -mx-4 px-4 sm:px-6 sm:-mx-6 lg:mx-0 lg:px-0 max-lg:overflow-x-auto max-lg:flex max-lg:flex-nowrap lg:grid lg:grid-cols-3 gap-5">
-                            <div
-                                class="group h-auto w-[251px] sm:w-[290px] lg:w-auto max-lg:shrink-0 relative flex flex-col bg-white lg:bg-main-bg rounded-[24px] px-2 pt-2 pb-4 lg:pb-6 lg:h-[465px] overflow-hidden">
-                                <!-- Зображення -->
-                                <div class="relative rounded-[24px] overflow-hidden shadow-red-2-40">
-                                    <img class="w-full h-[272px] lg:h-[344px] shadow-red-2-40 lg:group-hover:h-[280px] transition-all duration-800 ease-in-out object-cover object-center"
-                                        src="./assets/images/News/news-1.png" alt="">
-                                    <div class="absolute top-2 left-2 badge-default" data-badge-color="full-blur">
-                                        <span>Полезное</span>
-                                    </div>
-                                </div>
-                                <p
-                                    class="relative z-1 mt-5 lg:mt-4 px-2 text-xl lg:text-[24px] lg:max-w-[430px] font-bounded lg:mb-2 lg:h-[32px]">
-                                    <span
-                                        class="lg:px-2 relative lg:absolute lg:inset-0 opacity-100 lg:group-hover:opacity-0 transition-all duration-800 ease-in-out">70%
-                                        Астанчан хотели бы так жить
-                                    </span>
-                                    <span
-                                        class="absolute inset-0 font-inter px-2 opacity-0 lg:group-hover:opacity-100 transition-all duration-800 ease-in-out">Совместно
-                                        с ВМС Group мы провели крупное исследованиена тему планировочных решенией,
-                                        читайте подробнее
-                                    </span>
-                                </p>
-                                <!-- Опис (тепер fixed і не рухає блоки) -->
-                                <div class="max-lg:hidden relative">
-                                    <p
-                                        class="absolute top-0 left-0 px-2 font-inter text-[#5A6C66] text-[14px] max-w-[430px] opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-800 ease-in-out">
-                                    </p>
-                                </div>
-                                <!-- Кнопка -->
-                                <div
-                                    class="max-lg:hidden absolute bottom-4 right-4 border border-[#E0E6E5] rounded-[8px] py-[9px] px-[12px] cursor-pointer hover:border-[#81988B]/60 transition-colors duration-300">
-                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M0.530741 13.2463C0.923256 13.6471 1.57745 13.6471 1.96996 13.2463L7.48153 7.72529C7.88222 7.3245 7.88222 6.67834 7.48153 6.27756L1.96179 0.756554C1.56109 0.35577 0.915078 0.35577 0.514386 0.756554C0.113694 1.15734 0.113694 1.8035 0.514386 2.20428L5.30634 7.00551L0.530741 11.8067C0.130049 12.1993 0.130049 12.8537 0.530741 13.2463Z"
-                                            fill="#35463F" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div
-                                class="group h-auto w-[251px] sm:w-[290px] lg:w-auto max-lg:shrink-0 relative flex flex-col bg-white lg:bg-main-bg rounded-[24px] px-2 pt-2 pb-4 lg:pb-6 lg:h-[465px] overflow-hidden">
-                                <!-- Зображення -->
-                                <div class="relative rounded-[24px] overflow-hidden shadow-red-2-40">
-                                    <img class="w-full h-[272px] lg:h-[344px] shadow-red-2-40 lg:group-hover:h-[280px] transition-all duration-800 ease-in-out object-cover object-center"
-                                        src="./assets/images/News/news-2.png" alt="">
-                                    <div class="absolute top-2 left-2 badge-default" data-badge-color="full-blur">
-                                        <span>Новости</span>
-                                    </div>
-                                </div>
-                                <p
-                                    class="relative z-1 mt-5 lg:mt-4 px-2 text-xl lg:text-[24px] lg:max-w-[430px] font-bounded lg:mb-2 lg:h-[32px]">
-                                    <span
-                                        class="lg:px-2 relative lg:absolute lg:inset-0 opacity-100 lg:group-hover:opacity-0 transition-all duration-800 ease-in-out">Мы
-                                        строим так, как бы строили для себя.
-                                    </span>
-                                    <span
-                                        class="absolute inset-0 font-inter px-2 opacity-0 lg:group-hover:opacity-100 transition-all duration-800 ease-in-out">Взяли
-                                        интервью У СЕО, которая сама живет в SAT. Уют, свет и тепло - теперь это не
-                                        просто слова, а стандарт каждого проекта.
-                                        Уют, свет и тепло- теперь это не просто слова, а стандарт каждого проекта.
-                                        Познакомьтесь с
-                                    </span>
-                                </p>
-                                <!-- Опис (тепер fixed і не рухає блоки) -->
-                                <div class="max-lg:hidden relative">
-                                    <p
-                                        class="absolute top-0 left-0 px-2 font-inter text-[#5A6C66] text-[14px] max-w-[430px] opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-800 ease-in-out">
-                                    </p>
-                                </div>
-                                <!-- Кнопка -->
-                                <div
-                                    class="max-lg:hidden absolute bottom-4 right-4 border border-[#E0E6E5] rounded-[8px] py-[9px] px-[12px] cursor-pointer hover:border-[#81988B]/60 transition-colors duration-300">
-                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M0.530741 13.2463C0.923256 13.6471 1.57745 13.6471 1.96996 13.2463L7.48153 7.72529C7.88222 7.3245 7.88222 6.67834 7.48153 6.27756L1.96179 0.756554C1.56109 0.35577 0.915078 0.35577 0.514386 0.756554C0.113694 1.15734 0.113694 1.8035 0.514386 2.20428L5.30634 7.00551L0.530741 11.8067C0.130049 12.1993 0.130049 12.8537 0.530741 13.2463Z"
-                                            fill="#35463F" />
-                                    </svg>
-                                </div>
-                            </div>
-                            <div
-                                class="group h-auto w-[251px] sm:w-[290px] lg:w-auto max-lg:shrink-0 relative flex flex-col bg-white lg:bg-main-bg rounded-[24px] px-2 pt-2 pb-4 lg:pb-6 lg:h-[465px] overflow-hidden">
-                                <!-- Зображення -->
-                                <div class="relative rounded-[24px] overflow-hidden shadow-red-2-40">
-                                    <img class="w-full h-[272px] lg:h-[344px] shadow-red-2-40 lg:group-hover:h-[280px] transition-all duration-800 ease-in-out object-cover object-center"
-                                        src="./assets/images/News/news-3.png" alt="">
-                                    <div class="absolute top-2 left-2 badge-default" data-badge-color="full-blur">
-                                        <span>Акции</span>
-                                    </div>
-                                </div>
-                                <p
-                                    class="relative z-1 mt-5 lg:mt-4 px-2 text-xl lg:text-[24px] lg:max-w-[430px] font-bounded lg:mb-2 lg:h-[32px]">
-                                    <span
-                                        class="lg:px-2 relative lg:absolute lg:inset-0 opacity-100 lg:group-hover:opacity-0 transition-all duration-800 ease-in-out">Мы
-                                        строим так, как бы строили для себя.
-                                    </span>
-                                    <span
-                                        class="absolute inset-0 font-inter px-2 opacity-0 lg:group-hover:opacity-100 transition-all duration-800 ease-in-out">Начните
-                                        новую жизнь в собственном доме уже сейчас. Без переплат, без сложностей
-                                        - с нуля процентов на старт.
-                                        Начните новую жизнь в собственном доме уже сейчас. Без переплат, без сложностей
-                                        - с нуля
-                                    </span>
-                                </p>
-                                <!-- Опис (тепер fixed і не рухає блоки) -->
-                                <div class="max-lg:hidden relative">
-                                    <p
-                                        class="absolute top-0 left-0 px-2 font-inter text-[#5A6C66] text-[14px] max-w-[430px] opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-800 ease-in-out">
-                                    </p>
-                                </div>
-                                <!-- Кнопка -->
-                                <div
-                                    class="max-lg:hidden absolute bottom-4 right-4 border border-[#E0E6E5] rounded-[8px] py-[9px] px-[12px] cursor-pointer hover:border-[#81988B]/60 transition-colors duration-300">
-                                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M0.530741 13.2463C0.923256 13.6471 1.57745 13.6471 1.96996 13.2463L7.48153 7.72529C7.88222 7.3245 7.88222 6.67834 7.48153 6.27756L1.96179 0.756554C1.56109 0.35577 0.915078 0.35577 0.514386 0.756554C0.113694 1.15734 0.113694 1.8035 0.514386 2.20428L5.30634 7.00551L0.530741 11.8067C0.130049 12.1993 0.130049 12.8537 0.530741 13.2463Z"
-                                            fill="#35463F" />
-                                    </svg>
-                                </div>
+                    <!-- News Card 3 -->
+                    <div class="news-card group">
+                        <div class="news-card-image-wrapper">
+                            <img class="news-card-image" src="./assets/images/News/news-3.png" alt="">
+                            <div class="badge-default news-badge" data-badge-color="full-blur">
+                                <span>Акции</span>
                             </div>
                         </div>
-                        <div
-                            class="flex items-center justify-between bg-white lg:bg-[#F1F1F1] rounded-[24px] p-6 max-lg:gap-[10px] lg:px-8 lg:py-4">
-                            <div>
-                                <div class="text-xl lg:text-2xl font-bounded">Все новости
-                                </div>
-                                <div class="text-main-black-80 text-xs lg:text-base">Откройте для себя нашу строительную
-                                    компании</div>
-                            </div>
-                            <div class="border border-[#E0E6E5] rounded-[8px] py-[9px] px-[12px] cursor-pointer">
-                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M0.530741 13.2463C0.923256 13.6471 1.57745 13.6471 1.96996 13.2463L7.48153 7.72529C7.88222 7.3245 7.88222 6.67834 7.48153 6.27756L1.96179 0.756554C1.56109 0.35577 0.915078 0.35577 0.514386 0.756554C0.113694 1.15734 0.113694 1.8035 0.514386 2.20428L5.30634 7.00551L0.530741 11.8067C0.130049 12.1993 0.130049 12.8537 0.530741 13.2463Z"
-                                        fill="#35463F" />
-                                </svg>
-                            </div>
+                        <p class="news-card-title-wrapper">
+                            <span class="news-card-title-short">
+                                Мы строим так, как бы строили для себя.
+                            </span>
+                            <span class="news-card-title-full">
+                                Начните новую жизнь в собственном доме уже сейчас. Без переплат, без сложностей - с нуля процентов на старт. Начните новую жизнь в собственном доме уже сейчас. Без переплат, без сложностей - с нуля
+                            </span>
+                        </p>
+                        <div class="news-card-description">
+                            <p></p>
+                        </div>
+                        <div class="news-card-arrow">
+                            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.530741 13.2463C0.923256 13.6471 1.57745 13.6471 1.96996 13.2463L7.48153 7.72529C7.88222 7.3245 7.88222 6.67834 7.48153 6.27756L1.96179 0.756554C1.56109 0.35577 0.915078 0.35577 0.514386 0.756554C0.113694 1.15734 0.113694 1.8035 0.514386 2.20428L5.30634 7.00551L0.530741 11.8067C0.130049 12.1993 0.130049 12.8537 0.530741 13.2463Z" fill="#35463F"/>
+                            </svg>
                         </div>
                     </div>
                 </div>
+
+                <!-- All News Button -->
+                <div class="all-news-button">
+                    <div class="all-news-text-wrapper">
+                        <div class="all-news-title">Все новости</div>
+                        <div class="all-news-description">Откройте для себя нашу строительную компании</div>
+                    </div>
+                    <div class="all-news-arrow">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.530741 13.2463C0.923256 13.6471 1.57745 13.6471 1.96996 13.2463L7.48153 7.72529C7.88222 7.3245 7.88222 6.67834 7.48153 6.27756L1.96179 0.756554C1.56109 0.35577 0.915078 0.35577 0.514386 0.756554C0.113694 1.15734 0.113694 1.8035 0.514386 2.20428L5.30634 7.00551L0.530741 11.8067C0.130049 12.1993 0.130049 12.8537 0.530741 13.2463Z" fill="#35463F"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
             </div>
         </section>
         <!-- Reels Section -->
