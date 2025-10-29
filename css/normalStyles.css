@@ -563,6 +563,50 @@
     width: var(--icon-size-27);
   }
 
+  .chats-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    z-index: 2;
+    width: var(--circle-size-54);
+    height: var(--circle-size-54);
+    flex-shrink: 0;
+    border-radius: calc(infinity * 1px);
+    position: relative;
+  }
+
+  .chats-circles {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    width: var(--circle-size-54);
+    height: var(--circle-size-54);
+    flex-shrink: 0;
+    border-radius: calc(infinity * 1px);
+  }
+
+  .container-for-chats {
+    z-index: calc(1 * -1);
+    display: flex;
+    --tw-translate-y: calc(var(--spacing) * 12);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    flex-direction: column;
+    gap: calc(var(--spacing) * 3);
+    overflow: hidden;
+    transition-property: all;
+    --tw-duration: 650ms;
+    transition-duration: 650ms;
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+    position: relative;
+    max-height: 300px;
+    padding-bottom: 60px;
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
   footer {
     position: relative;
     background-color: #131314;
