@@ -1,3 +1,16 @@
+// button toggles 
+
+const btnToggles = document.querySelectorAll('.btnToggle');
+
+btnToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('checked');
+    }); 
+});
+
+const compareSwitchBtns = document.querySelectorAll('.compare-rc-tab-btn');
+
+
 // ============================================
 // LAZY LOADING UTILITY
 // ============================================
@@ -1897,6 +1910,8 @@ class ResidentialComplexSwitch {
         this.respublikaContainer = document.getElementById('respublika-content');
         this.parkCityContainer = document.getElementById('parkcity-content');
         this.currentView = 'respublika';
+        this.tabButtons = document.querySelectorAll('.compare-rc-tab-btn');
+        this.tabMarker = document.querySelector('.compare-rc-tab-marker');
 
         this.init();
     }
@@ -1922,27 +1937,60 @@ class ResidentialComplexSwitch {
         }
 
         this.bindTabButtons();
+        this.initializeMarker();
+    }
+
+    initializeMarker() {
+        // Position marker on first button initially
+        if (this.tabButtons.length > 0 && this.tabMarker) {
+            const firstButton = this.tabButtons[0];
+            this.repositionMarker(firstButton);
+        }
+    }
+
+    repositionMarker(button) {
+        if (!this.tabMarker) return;
+
+        const buttonRect = button.getBoundingClientRect();
+        const containerRect = button.parentElement.getBoundingClientRect();
+        
+        this.tabMarker.style.width = `${button.offsetWidth}px`;
+        this.tabMarker.style.height = `${button.offsetHeight}px`;
+        this.tabMarker.style.left = `${button.offsetLeft}px`;
     }
 
     bindTabButtons() {
-        // Find the second main-container section with tabs
-        const sections = document.querySelectorAll('.main-container');
-        if (sections.length < 2) return;
-
-        const tabContainer = sections[1].querySelector('[x-data*="tabSelected"]');
-        if (!tabContainer) return;
-
-        const tabButtons = tabContainer.querySelectorAll('button[\\:id]');
-
-        tabButtons.forEach((button, index) => {
+        this.tabButtons.forEach((button) => {
             button.addEventListener('click', () => {
-                // index 0 = Respublika, index 1 = Park City
-                if (index === 0) {
+                const tabName = button.getAttribute('data-tab');
+                
+                // Update button states
+                this.tabButtons.forEach(btn => {
+                    btn.classList.remove('compare-rc-tab-active');
+                    btn.classList.add('compare-rc-tab-inactive');
+                });
+                
+                button.classList.add('compare-rc-tab-active');
+                button.classList.remove('compare-rc-tab-inactive');
+
+                // Reposition marker
+                this.repositionMarker(button);
+
+                // Switch content
+                if (tabName === 'respublika') {
                     this.showRespublika();
-                } else if (index === 1) {
+                } else if (tabName === 'parkcity') {
                     this.showParkCity();
                 }
             });
+        });
+
+        // Handle window resize to reposition marker
+        window.addEventListener('resize', () => {
+            const activeButton = document.querySelector('.compare-rc-tab-btn.compare-rc-tab-active');
+            if (activeButton) {
+                this.repositionMarker(activeButton);
+            }
         });
     }
 
@@ -2544,7 +2592,7 @@ class ProjectsDataManager {
     }
 
     renderProjects() {
-        const container = document.querySelector('#projects .grid');
+        const container = document.querySelector('#projects .projects-grid');
         if (!container) return;
 
         // Clear existing content
