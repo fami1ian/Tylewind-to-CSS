@@ -523,15 +523,6 @@
     box-sizing: border-box;
   }
 
-  @media (max-width: 615px) {
-    .container-badges {
-      gap: 12px !important;
-    }
-
-    .devel-com-badge {
-      margin-right: 50%;
-    }
-  }
 
   .container-badges {
     display: inline-flex;
@@ -7292,3 +7283,14 @@ ards Styles */
 /* ============================================ */
 /* PHONE NUMBER COPY NOTIFICATION */
 /* ============================================ */
+
+/* Compare RC Tabs Marker */
+.compare-rc-tab-marker {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    width: 50%;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    pointer-events: none;
+}

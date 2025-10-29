@@ -338,8 +338,7 @@
                                 <li>
                                     <label class="cursor-pointer">
                                         <input type="checkbox" class="peer hidden">
-                                        <span
-                                            class="extra-options-item btnToggle">
+                                        <span class="extra-options-item btnToggle">
                                             <span>Только в ипотеку</span>
                                         </span>
                                     </label>
@@ -347,17 +346,14 @@
                                 <li>
                                     <label class="cursor-pointer">
                                         <input type="checkbox" class="peer hidden">
-                                        <span
-                                            class="extra-options-item btnToggle">
+                                        <span class="extra-options-item btnToggle">
                                             <span>Только со скидками</span>
                                         </span>
                                     </label>
                                 </li>
                             </ul>
                         </div>
-                        <button
-                            class="clear-filters-des btn-default"
-                            id="clearFilters" style="display: none;">
+                        <button class="clear-filters-des btn-default" id="clearFilters" style="display: none;">
 
                             <span class="font-medium">Очистить фильтры</span>
                             <svg class="icon-sm" width="14" height="14" viewBox="0 0 14 14"
@@ -383,14 +379,12 @@
                                         return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
                                     }
                                 }" x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);">
-                            <div x-ref="tabButtons"
-                                class="pf-switch-buttons">
+                            <div x-ref="tabButtons" class="pf-switch-buttons">
                                 <button :id="$id(tabId)" @click="tabButtonClicked($el);" type="button"
                                     class="pf-switch-button">Проекты</button>
                                 <button :id="$id(tabId)" @click="tabButtonClicked($el);" type="button"
                                     class="pf-switch-button">Квартиры</button>
-                                <div x-ref="tabMarker"
-                                    class="pf-switch-marker"
+                                <div x-ref="tabMarker" class="pf-switch-marker"
                                     style="width: 132px; height: 58px; left: 138px;">
                                     <div class="marker-div"></div>
                                 </div>
@@ -408,7 +402,7 @@
                     </div>
 
                 </div>
-                <div id="flats" class="sm:flex sm:flex-col sm:gap-8 transition-all duration-500 ease-in-out"
+                <div id="flats" class="flats"
                     style="position: relative; opacity: 1; transform: translateY(0px); pointer-events: auto; top: 0px; left: 0px; width: 100%;">
 
                 </div>
@@ -417,101 +411,81 @@
             </div>
         </section>
         <section class="main-container">
-            <div id="compareRc" x-data="{
-                                    tabSelected: 1,
-                                    tabId: $id('tabs'),
-                                    tabButtonClicked(tabButton){
-                                        this.tabSelected = tabButton.id.replace(this.tabId + '-', '');
-                                        this.tabRepositionMarker(tabButton);
-                                    },
-                                    tabRepositionMarker(tabButton){
-                                        this.$refs.tabMarker.style.width=tabButton.offsetWidth + 'px';
-                                        this.$refs.tabMarker.style.height=tabButton.offsetHeight + 'px';
-                                        this.$refs.tabMarker.style.left=tabButton.offsetLeft + 'px';
-                                    },
-                                    tabContentActive(tabContent){
-                                        return this.tabSelected == tabContent.id.replace(this.tabId + '-content-', '');
-                                    }
-                                }" x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);"
-                class="relative flex-none w-full order-1 flex flex-col w-[627px] rounded-[24px] bg-primary gap-[21px] lg:gap-[35px]">
-                <div x-ref="tabButtons"
-                    class="p-[2px] relative inline-grid items-center justify-center w-full h-[43px] lg:h-[52px] grid-cols-2 gap-2 gap-[6px] text-xs lg:text-17 text-center text-main-black-60 font-bold border border-light-primary rounded-[20px] bg-main-green-dark rounded-[20px] select-none border border-light-primary lg:max-w-[290px] lg:w-full lg:place-self-center">
-                    <button :id="$id(tabId)" @click="tabButtonClicked($el);" type="button"
-                        class="relative z-20 inline-flex items-center justify-center w-full h-full transition-all rounded-[18px] whitespace-nowrap transition-colors duration-250 ease-in-out"
-                        :class="tabSelected==1
-                                          ? 'text-main-green cursor-default'
-                                          : 'hover:bg-[#131314]/80 cursor-pointer'">Respublika</button>
-                    <button :class="tabSelected==2
-                                          ? 'text-main-green cursor-default'
-                                          : 'hover:bg-[#131314]/80 cursor-pointer'" :id="$id(tabId)"
-                        @click="tabButtonClicked($el);" type="button"
-                        class="relative z-20 inline-flex items-center justify-center w-full h-full transition-all rounded-[18px] cursor-pointer whitespace-nowrap">Park
-                        City</button>
-                    <div x-ref="tabMarker" class="absolute left-0 z-10 w-1/2 h-full  duration-600 ease-in-out" x-cloak>
-                        <div class="w-full h-full bg-light-primary rounded-[18px] shadow-sm"></div>
+            <div id="compareRc" class="compare-rc">
+                <div class="compare-rc-tabs">
+                    <button type="button" class="compare-rc-tab-btn compare-rc-tab-active"
+                        data-tab="respublika">
+                        Respublika
+                    </button>
+                    <button type="button" class="compare-rc-tab-btn compare-rc-tab-inactive"
+                        data-tab="parkcity">
+                        Park City
+                    </button>
+                    <div class="compare-rc-tab-marker">
+                        <div class="com-marker-div"></div>
                     </div>
                 </div>
                 <div>
                     <!-- Respublika Content -->
-                    <div id="respublika-content" class="transition-all duration-500 ease-in-out">
-                        <div class="lg:relative max-lg:space-y-3 lg:space-y-8">
+                    <div id="parkcity-content" class="respublika-content">
+                        <div class="resp-con-top">
                             <div
-                                class="lg:relative text-34 sm:text-50 lg:text-95 sm:flex sm:gap-[19px] sm:justify-center lg:items-center text-main-green font-bounded max-sm:leading-8">
+                                class="com-title-con">
                                 <div>
                                     <span>Развиваем</span>
                                 </div>
-                                <div class="max-lg:hidden relative z-1 ">
-                                    <img class="rounded-[16px] w-[185px]  h-[111px] object-center object-cover"
-                                        src="./assets/images/RC/rc-2.png" alt="">
-                                    <div class="absolute -top-4 left-15 badge-sm" data-badge-color="green-dark-2">
+                                <div class="title-imt">
+                                    <img class="title-img"
+                                        src="./assets/images/RC/rc-3.jpg" alt="">
+                                    <div class="title-badge-c" data-badge-color="green-dark-2">
                                         <span class="text-nowrap">Комплексное развитие</span>
                                     </div>
                                 </div>
-                                <div class="relative z-1 max-sm:place-self-end">
+                                <div class="title-end">
                                     <span>районы</span>
-                                    <div class="sm:!hidden absolute z-2 -top-2 right-37 badge-sm "
+                                    <div class="title-badge-d badge-sm"
                                         data-badge-color="green-dark-2">
                                         <span>Доступность</span>
                                     </div>
-                                    <div class="infrosB max-lg:!hidden absolute top-10  badge-sm"
+                                    <div class="infrosB badge-sm"
                                         data-badge-color="green-light">
                                         <span>Инфрастуктура</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="max-lg:space-y-3">
-                                <div class="relative z-1 w-full px-[42px] sm:place-self-center lg:hidden">
+                            <div class="osso">
+                                <div class="mob-com-img">
                                     <div class="w-full h-[139px] sm:h-[112px] rounded-[16px] overflow-hidden">
                                         <img class="object-cover object-center size-full"
                                             src="./assets/images/RC/rc-3.jpg" alt="">
                                     </div>
-                                    <div class="max-sm:!hidden absolute z-2 -bottom-2 right-2 badge-sm "
+                                    <div class="greenZ-badge badge-sm "
                                         data-badge-color="green-dark-2">
                                         <span>Зелёные зоны</span>
                                     </div>
-                                    <div class="max-sm:!hidden absolute z-2 top-4 left-0  badge-sm"
+                                    <div class="kd-badge  badge-sm"
                                         data-badge-color="green-light">
                                         <span>Комплексное развитие</span>
                                     </div>
                                 </div>
-                                <p
-                                    class="rc-compare-des text-2xs lg:text-base text-main-black-60 font-medium sm:place-self-center  sm:w-[364px] lg:w-[603px]">
+                                <p style="justify-self: center;"
+                                    class="rc-compare-des">
                                     SAT NS создает не просто дома, а формирует полноценную городскую среду. Сразу
                                     с инфраструктурой, удобной навигацией и логистикой для жизни, работы и отдыха
                                 </p>
                             </div>
-                            <div class="max-lg:hidden absolute -top-10 acces-left badge-sm"
+                            <div class="acces-badge badge-sm"
                                 data-badge-color="green-dark-2">
                                 <span>Доступность</span>
                             </div>
-                            <div class="max-lg:hidden absolute acces-bottom left-65 badge-sm"
+                            <div class="greenZ-badge2 badge-sm"
                                 data-badge-color="green-light">
                                 <span>Зеленые зоны</span>
                             </div>
                         </div>
-                        <div class="max-lg:space-y-3 lg:place-items-center">
-                            <div class="lg:!hidden container-badges !gap-2">
-                                <div class="sm:!hidden badge-sm devel-com-badge" data-badge-color="green-light">
+                        <div class="bottom-compare">
+                            <div class="container-badges compare">
+                                <div class="badge-sm devel-com-badge" data-badge-color="green-light">
                                     <span>Комплексное развитие</span>
                                 </div>
                                 <div class="badge-sm" data-badge-color="green-dark-2">
@@ -521,71 +495,71 @@
                                     <span>Зелёные зоны</span>
                                 </div>
                             </div>
-                            <button class="btn-default lg:max-w-[592px]" data-btn-color="light-green">
+                            <button class="btn-default rccom-mbtn" data-btn-color="light-green">
                                 <span>Выбрать квартиру</span>
                             </button>
                         </div>
                     </div>
                     <!-- Park City Content -->
-                    <div id="parkcity-content" class="transition-all duration-500 ease-in-out">
-                        <div class="lg:relative max-lg:space-y-3 lg:space-y-8">
+                    <div id="respublika-content" class="respublika-content">
+                        <div class="resp-con-top">
                             <div
-                                class="lg:relative text-34 sm:text-50 lg:text-95 sm:flex sm:gap-[19px] sm:justify-center lg:items-center text-main-green font-bounded max-sm:leading-8">
+                                class="com-title-con">
                                 <div>
                                     <span>Развиваем</span>
                                 </div>
-                                <div class="max-lg:hidden relative z-1 ">
-                                    <img class="rounded-[16px] w-[185px]  h-[111px] object-center object-cover"
-                                        src="./assets/images/RC/rc-3.jpg" alt="">
-                                    <div class="absolute -top-4 left-15 badge-sm" data-badge-color="green-dark-2">
+                                <div class="title-imt">
+                                    <img class="title-img"
+                                        src="./assets/images/RC/rc-2.png" alt="">
+                                    <div class="title-badge-c" data-badge-color="green-dark-2">
                                         <span class="text-nowrap">Комплексное развитие</span>
                                     </div>
                                 </div>
-                                <div class="relative z-1 max-sm:place-self-end">
+                                <div class="title-end">
                                     <span>районы</span>
-                                    <div class="sm:!hidden absolute z-2 -top-2 right-37 badge-sm "
+                                    <div class="title-badge-d badge-sm"
                                         data-badge-color="green-dark-2">
                                         <span>Доступность</span>
                                     </div>
-                                    <div class="infrosB max-lg:!hidden absolute top-10  badge-sm"
+                                    <div class="infrosB badge-sm"
                                         data-badge-color="green-light">
                                         <span>Инфрастуктура</span>
                                     </div>
                                 </div>
                             </div>
-                            <div class="max-lg:space-y-3">
-                                <div class="relative z-1 w-full px-[42px] sm:place-self-center lg:hidden">
+                            <div class="osso">
+                                <div class="mob-com-img">
                                     <div class="w-full h-[139px] sm:h-[112px] rounded-[16px] overflow-hidden">
                                         <img class="object-cover object-center size-full"
                                             src="./assets/images/RC/rc-3.jpg" alt="">
                                     </div>
-                                    <div class="max-sm:!hidden absolute z-2 -bottom-2 right-2 badge-sm "
+                                    <div class="greenZ-badge badge-sm "
                                         data-badge-color="green-dark-2">
                                         <span>Зелёные зоны</span>
                                     </div>
-                                    <div class="max-sm:!hidden absolute z-2 top-4 left-0  badge-sm"
+                                    <div class="kd-badge  badge-sm"
                                         data-badge-color="green-light">
                                         <span>Комплексное развитие</span>
                                     </div>
                                 </div>
-                                <p
-                                    class="rc-compare-des text-2xs lg:text-base text-main-black-60 font-medium sm:place-self-center  sm:w-[364px] lg:w-[603px]">
+                                <p style="justify-self: center;"
+                                    class="rc-compare-des">
                                     SAT NS создает не просто дома, а формирует полноценную городскую среду. Сразу
                                     с инфраструктурой, удобной навигацией и логистикой для жизни, работы и отдыха
                                 </p>
                             </div>
-                            <div class="max-lg:hidden absolute -top-10 acces-left badge-sm"
+                            <div class="acces-badge badge-sm"
                                 data-badge-color="green-dark-2">
                                 <span>Доступность</span>
                             </div>
-                            <div class="max-lg:hidden absolute acces-bottom left-65 badge-sm"
+                            <div class="greenZ-badge2 badge-sm"
                                 data-badge-color="green-light">
                                 <span>Зеленые зоны</span>
                             </div>
                         </div>
-                        <div class="max-lg:space-y-3 lg:place-items-center">
-                            <div class="lg:!hidden container-badges">
-                                <div class="sm:!hidden badge-sm devel-com-badge" data-badge-color="green-light">
+                        <div class="bottom-compare">
+                            <div class="container-badges">
+                                <div class="badge-sm devel-com-badge" data-badge-color="green-light">
                                     <span>Комплексное развитие</span>
                                 </div>
                                 <div class="badge-sm" data-badge-color="green-dark-2">
@@ -595,7 +569,7 @@
                                     <span>Зелёные зоны</span>
                                 </div>
                             </div>
-                            <button class="btn-default lg:max-w-[592px]" data-btn-color="light-green">
+                            <button class="btn-default rccom-mbtn" data-btn-color="light-green">
                                 <span>Выбрать квартиру</span>
                             </button>
                         </div>
@@ -2754,8 +2728,7 @@
     <section id="quizModal" class="modal hidden quiz-all">
         <div class="quiz-modal-container">
             <!-- Close Button -->
-            <button
-                class="quiz-close-btn data-close-modal">
+            <button class="quiz-close-btn data-close-modal">
                 <img class="icon-16" src="./assets/icons/cancel-white.svg" alt="">
             </button>
             <!-- Quiz Steps Container -->
@@ -2777,8 +2750,7 @@
                             <button class="quiz-option-btn number" data-value="4+">4+</button>
                         </div>
                         <div class="quiz-buttons">
-                            <button
-                                class="quiz-skip-btn">Пропустить</button>
+                            <button class="quiz-skip-btn">Пропустить</button>
                             <button class="quiz-next-btn btn-default" data-btn-color="white" disabled>
                                 <span>Далее</span>
                             </button>
@@ -2804,8 +2776,7 @@
                             <button class="quiz-option-btn" data-value="60+">Больше 60 млн ₸</button>
                         </div>
                         <div class="quiz-buttons">
-                            <button
-                                class="quiz-skip-btn">Пропустить</button>
+                            <button class="quiz-skip-btn">Пропустить</button>
                             <button class="quiz-next-btn btn-default" data-btn-color="white" disabled>
                                 <span>Далее</span>
                             </button>
@@ -2840,10 +2811,10 @@
         </div>
     </section>
     <!--  Swiper.js  -->
-      <!--ez-->
-      <!--ez-->
-      <!--ez-->
-      <!--pon-->
+    <!--ez-->
+    <!--ez-->
+    <!--ez-->
+    <!--pon-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="/resource/js/default.js"></script>
     <script src="./js/main.js"></script>
@@ -2851,4 +2822,5 @@
 <!--TEST-->
 <!--TEST-->
 <!--TEST-->
+
 </html>
