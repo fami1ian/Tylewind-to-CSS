@@ -2,6 +2,7 @@
 @layer properties;
 
 @import './prep.css';
+@import './storeHere.css';
 
 .acc {
   width: 80%;
@@ -118,7 +119,9 @@
   .header-default .navigation li {
     cursor: pointer;
   }
-
+  .cursor-pointer {
+    cursor: pointer;
+  }
   .header-default .navigation li:not(:nth-child(4), :nth-child(6)) {
     display: none;
 
