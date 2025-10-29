@@ -1,3 +1,14 @@
+// button toggles 
+
+const btnToggles = document.querySelectorAll('.btnToggle');
+
+btnToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+        btn.classList.toggle('checked');
+    }); 
+});
+
+
 // ============================================
 // LAZY LOADING UTILITY
 // ============================================
@@ -2544,7 +2555,7 @@ class ProjectsDataManager {
     }
 
     renderProjects() {
-        const container = document.querySelector('#projects .grid');
+        const container = document.querySelector('#projects .projects-grid');
         if (!container) return;
 
         // Clear existing content

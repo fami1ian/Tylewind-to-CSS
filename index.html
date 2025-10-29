@@ -330,19 +330,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="space-y-4 lg:space-y-[33px]">
-                    <div class="lg:flex lg:items-end lg:justify-between lg:flex-wrap lg:gap-6">
-                        <div class="max-lg:hidden space-y-2">
-                            <p class="text-base font-medium text-main-black-60">Дополнительные опции</p>
-                            <ul class="flex gap-3 h-[32px] text-center text-base">
+                <div class="desc-fp-bottom">
+                    <div class="rest-desk-filters">
+                        <div class="extra-options">
+                            <p class="extra-options-text">Дополнительные опции</p>
+                            <ul class="extra-options-list">
                                 <li>
                                     <label class="cursor-pointer">
                                         <input type="checkbox" class="peer hidden">
                                         <span
-                                            class="text-center content-center px-5 h-full flex items-center justify-center
-                                                                 ring ring-border-line-white bg-main-black-5 rounded-full
-                                                                 hover:ring-gray-400 
-                                                                 peer-checked:text-main-green peer-checked:ring-primary  peer-checked:bg-primary transition-all duration-300 ease-in-out transform">
+                                            class="extra-options-item btnToggle">
                                             <span>Только в ипотеку</span>
                                         </span>
                                     </label>
@@ -351,10 +348,7 @@
                                     <label class="cursor-pointer">
                                         <input type="checkbox" class="peer hidden">
                                         <span
-                                            class="text-center content-center px-5 h-full flex items-center justify-center
-                                                                 ring ring-border-line-white bg-main-black-5 rounded-full
-                                                                 hover:ring-gray-400 
-                                                                 peer-checked:text-main-green peer-checked:ring-primary  peer-checked:bg-primary transition-all duration-300 ease-in-out transform">
+                                            class="extra-options-item btnToggle">
                                             <span>Только со скидками</span>
                                         </span>
                                     </label>
@@ -362,7 +356,7 @@
                             </ul>
                         </div>
                         <button
-                            class="clear-filters-des !items-center badge-sm !bg-main-black-5 border border-border-line-white fill-main-black-100 active:fill-main-green  active:!bg-primary active:text-main-green hover:border-gray-400 transition-colors duration-300 ease-in-out"
+                            class="clear-filters-des btn-default"
                             id="clearFilters" style="display: none;">
 
                             <span class="font-medium">Очистить фильтры</span>
@@ -373,8 +367,7 @@
                                 </path>
                             </svg>
                         </button>
-                        <div class="pointer-events-auto relative z-1 lg:max-w-[272px] lg:w-full rounded-full
-                                text-[#989899] font-bold text-xs lg:text-base text-center" x-data="{
+                        <div class="pf-switch" x-data="{
                                     tabSelected: 1,
                                     tabId: $id('tabs'),
                                     tabButtonClicked(tabButton){
@@ -391,30 +384,24 @@
                                     }
                                 }" x-init="tabRepositionMarker($refs.tabButtons.firstElementChild);">
                             <div x-ref="tabButtons"
-                                class="font-inter font-bold text-xs lg:text-base text-main-black-60 relative inline-grid items-center justify-center !w-full h-[35px] lg:h-[60px] grid-cols-2 gap-[6px]  text-gray-500 bg-main-black-5 rounded-full  !border border-border-line-white">
+                                class="pf-switch-buttons">
                                 <button :id="$id(tabId)" @click="tabButtonClicked($el);" type="button"
-                                    class="relative z-20 items-center justify-center !w-full h-full transition-all rounded-full whitespace-nowrap transition-colors duration-250 ease-in-out hover:bg-black/4 cursor-pointer"
-                                    :class="tabSelected==1
-                                              ? 'text-main-black-100 cursor-default'
-                                              : 'hover:bg-black/4 cursor-pointer'" id="tabs-1-1">Проекты</button>
+                                    class="pf-switch-button">Проекты</button>
                                 <button :id="$id(tabId)" @click="tabButtonClicked($el);" type="button"
-                                    class="relative z-20 inline-flex items-center justify-center !w-full h-full transition-all rounded-full whitespace-nowrap transition-colors duration-250 ease-in-out text-main-black-100 cursor-default"
-                                    :class="tabSelected==2
-                                              ? 'text-main-black-100 cursor-default'
-                                              : 'hover:bg-black/4 cursor-pointer'" id="tabs-1-2">Квартиры</button>
+                                    class="pf-switch-button">Квартиры</button>
                                 <div x-ref="tabMarker"
-                                    class="absolute left-0 z-10 py-[1px] pb-[1px]  w-1/2 !h-full duration-600 ease-in-out "
+                                    class="pf-switch-marker"
                                     style="width: 132px; height: 58px; left: 138px;">
-                                    <div class="!w-full !h-full bg-white rounded-full shadow-black-5-10"></div>
+                                    <div class="marker-div"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div id="projects" class="sm:flex sm:flex-col sm:gap-8 transition-all duration-500 ease-in-out">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-[38px] sm:gap-8 lg:gap-[50px]">
+                    <div id="projects" class="projects">
+                        <div class="projects-grid">
 
                         </div>
-                        <button class="max-sm:!hidden lg:!hidden btn-default" data-btn-color="green">
+                        <button class="all-flats-p btn-default" data-btn-color="green">
                             <img class="icon-base" src="./assets/icons/list-flat.svg" alt="">
                             <span>Все квартиры</span>
                         </button>

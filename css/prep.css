@@ -373,4 +373,12 @@
     .relative {
         position: relative;
     }
+
+    .cursor-pointer {
+        cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
+    }
 }
