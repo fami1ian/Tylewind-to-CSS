@@ -2733,31 +2733,31 @@
                 </video>
                 <!-- Play/Pause Overlay -->
                 <div id="reelsPlayPause"
-                    class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 transition-opacity duration-300">
-                    <div class="circle-82 pointer-events-auto" data-circle-color="full-blur">
+                    class="reels-play-pause">
+                    <div class="reels-pause" data-circle-color="full-blur">
                         <img id="reelsPlayIcon" class="icon-33" src="./assets/icons/puase-white.svg" alt="">
                     </div>
                 </div>
                 <!-- Navigation Arrows -->
                 <button id="reelsPrevBtn"
-                    class="reel-button absolute left-4 top-1/2 -translate-y-1/2 circle-48 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                    class="reels-next-l-btn circle-48"
                     data-circle-color="full-blur">
-                    <svg style="transform: rotate(90deg);" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                    <svg style="transform: rotate(90deg);" class="reels-next" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
                 <button id="reelsNextBtn"
-                    class="reel-button absolute right-4 top-1/2 -translate-y-1/2 circle-48 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                    class="reels-next-r-btn circle-48"
                     data-circle-color="full-blur">
-                    <svg style="transform: rotate(-90deg);" class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                    <svg style="transform: rotate(-90deg);" class="reels-next" fill="none" stroke="currentColor"
                         viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
                 </button>
                 <!-- Progress Bar -->
-                <div class="absolute bottom-0 left-0 right-0 h-1 bg-white/20">
-                    <div style="height: 4px;" id="reelsProgress" class="h-full bg-white transition-all duration-100"
+                <div class="reels-progress-bottom">
+                    <div style="height: 4px;" id="reelsProgress" class="reels-progress"
                         style="width: 0%"></div>
                 </div>
             </div>
